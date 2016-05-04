@@ -1,0 +1,18 @@
+{% extends "views/base.html" %}
+
+{% block title %}User Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row col-md-6 col-md-offset-3">
+    <h2>Sign In</h2>
+    <form action="{% url 'signin' %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Sign In" class ="btn btn-primary pull-right">
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}

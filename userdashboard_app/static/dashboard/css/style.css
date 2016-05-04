@@ -1,0 +1,15 @@
+nav {
+  padding: 20px;
+}
+#navbar ul li a {
+  padding-right: 60px;
+}
+#start_button {
+  background-color: transparent;
+  border-color: black;
+  color: black;
+}
+#start_button:hover{
+  padding-left: 20px;
+  padding-right: 20px;
+}

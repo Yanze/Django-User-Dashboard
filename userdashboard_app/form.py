@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
-# modify the built-in form
+# customize the built-in form
 class SignInForm(UserCreationForm):
     first_name = forms.CharField(label='First Name')
     last_name = forms.CharField(label='Last Name')

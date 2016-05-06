@@ -4,15 +4,23 @@
   <!-- user dashboard list -->
 <h2>Manage Users</h2>
 
-<table>
+<table class="table">
   <thead>
-    <tr>
+    <tr class="active">
       <th>Id</th>
-      <th>Id</th>
-      <th>Id</th>
-      <th>Id</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>User Level</th>
     </tr>
   </thead>
+
+  <tbody>
+    <tr>
+      {% for user in users %}
+      <td>{{ user }}</td>
+      {% endfor %}
+    </tr>
+  </tbody>
 </table>
 
 {% endblock %}

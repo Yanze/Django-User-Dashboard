@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^dashboard/$', views.dashboard, name="dashboard"),
     url(r'^signin/$', views.Signin.as_view(), name='signin'),
     url(r'^login/$', views.Login.as_view(), name='login'),
+    url(r'^logout/$', views.logout_view, name='logout'),
 ]

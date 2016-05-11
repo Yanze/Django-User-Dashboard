@@ -2,25 +2,63 @@
 {% block title %}User Dashboard{% endblock %}
 {% block content%}
   <!-- user dashboard list -->
-<h2>Manage Users</h2>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          <!-- <li><a href="{% url 'login' %}">Log In</a></li> -->
+          <!-- <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-fixed-top/">Fixed top</a></li> -->
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
 
-<table class="table">
-  <thead>
-    <tr class="active">
-      <th>Id</th>
-      <th>Username</th>
-      <th>Email</th>
-      <th>User Level</th>
-    </tr>
-  </thead>
+<div class="container">
+  <a class="btn btn-primary btn-lg" href="">Add New User</a>
+  <h2 class="text-center">Manage Users</h2>
 
-  <tbody>
-    <tr>
+  <table class="table">
+    <thead>
+      <tr class="active">
+        <th>ID</th>
+        <th>Username</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>User Level</th>
+        <th>actions</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
       {% for user in users %}
-      <td>{{ user }}</td>
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ None }}</td>
+        <td><input class="btn btn-success btn-sm" type="button" value="Update"></td>
+        <td><input class="btn btn-danger btn-sm" type="button" value="Delete"></td>
+      </tr>
       {% endfor %}
-    </tr>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
+
+
 
 {% endblock %}

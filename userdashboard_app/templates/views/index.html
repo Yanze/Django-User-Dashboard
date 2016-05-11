@@ -1,15 +1,39 @@
 {% extends 'views/base.html' %}
 {% block title %}User Dashboard{% endblock %}
 {% block content%}
-  <div class="container">
+  <!-- <div class="container"> -->
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'signin' %}">Sign In</a></li>
+            <li><a href="{% url 'login' %}">Log In</a></li>
+            <!-- <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+            <li><a href="../navbar-fixed-top/">Fixed top</a></li> -->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-    <div class="jumbotron">
-      <h2>Welcome To The User Dashboard</h2>
-      <p>Et ipsum magnis elit condimentum est egestas,
-        pellentesque proin tortor tristique, pede mollis magna,
-        tincidunt vestibulum interdum ante dolor sem</p>
-        <button class="btn btn-primary pull-right" id="start_button">Start</button>
-    </div>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>Welcome To The User Dashboard</h2>
+        <p>Et ipsum magnis elit condimentum est egestas,
+          pellentesque proin tortor tristique, pede mollis magna,
+          tincidunt vestibulum interdum ante dolor sem</p>
+          <button class="btn btn-primary pull-right" id="start_button">Start</button>
+      </div>
+
 
     <div class="row col-md-12">
       <div class="col-md-4">

@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'userdashboard.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'userdashboard',
+        'NAME': 'userdashboard2',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',
